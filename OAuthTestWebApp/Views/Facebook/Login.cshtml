@@ -1,0 +1,12 @@
+﻿@model OAuthTestWebApp.Models.Facebook.LoginViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div style="margin-top: 20px;">
+        <button type="submit" class="btn btn-primary">Login</button>
+    </div>
+}

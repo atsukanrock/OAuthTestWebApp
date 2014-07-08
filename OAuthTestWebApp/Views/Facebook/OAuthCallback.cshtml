@@ -1,0 +1,24 @@
+﻿@model OAuthTestWebApp.Models.Facebook.OAuthCallbackViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Result</h2>
+<h3>@Model.Description</h3>
+@if (Model.Success)
+{
+    <div class="form-group">
+        @Html.LabelFor(model => model.AccessToken, "Access Token")
+        <pre class="form-control-static">@Model.AccessToken</pre>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.ExpiresApproximatelyAt, "Expires Approximately at (UTC Computed)")
+        <p class="form-control-static">@Model.ExpiresApproximatelyAt</p>
+    </div>
+    using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.AccessToken)
+        @Html.HiddenFor(model => model.SecondsTilExpiration)
+        <button type="submit" class="btn btn-primary">Get my Facebook profile</button>
+    }
+}

@@ -1,0 +1,13 @@
+﻿@model OAuthTestWebApp.Models.Facebook.MyProfileViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Your Facebook Profile</h2>
+<div class="form-group">
+    @Html.LabelFor(model => model.StatusCode, "Status Code")
+    <p class="form-control-static">@((int)Model.StatusCode): @Model.StatusCode</p>
+</div>
+<div class="form-group">
+    @Html.LabelFor(model => model.Content, "Content")
+    <pre class="form-control-static">@Model.Content</pre>
+</div>

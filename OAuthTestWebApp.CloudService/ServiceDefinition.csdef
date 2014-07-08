@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="OAuthTestWebApp.CloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2014-01.2.3">
+  <WebRole name="OAuthTestWebApp" vmsize="ExtraSmall">
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="HttpEndpoint" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <Endpoints>
+      <InputEndpoint name="HttpEndpoint" protocol="http" port="80" />
+    </Endpoints>
+    <Imports>
+      <Import moduleName="RemoteAccess" />
+      <Import moduleName="RemoteForwarder" />
+    </Imports>
+    <ConfigurationSettings>
+      <Setting name="Facebook.ApplicationId" />
+      <Setting name="Facebook.ApplicationSecret" />
+      <Setting name="Facebook.Scope" />
+      <Setting name="Facebook.Fields" />
+    </ConfigurationSettings>
+    <Certificates>
+    </Certificates>
+  </WebRole>
+</ServiceDefinition>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="OAuthTestWebApp.CloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2014-01.2.3">
+  <Role name="OAuthTestWebApp">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Facebook.ApplicationId" value="1463887900520679" />
+      <Setting name="Facebook.ApplicationSecret" value="8ea41db9cd028682a1932d1ab68b6035" />
+      <Setting name="Facebook.Scope" value="email,offline_access,user_birthday" />
+      <Setting name="Facebook.Fields" value="id,first_name,last_name,email,birthday" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="atsushi.kambara" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBpgYJKoZIhvcNAQcDoIIBlzCCAZMCAQAxggFPMIIBSwIBADAzMB8xHTAbBgNVBAMTFG9hdXRodGVzdCBNYW5hZ2VtZW50AhA/Hi8GU1SzqEJltaxr7oYxMA0GCSqGSIb3DQEBAQUABIIBAGtfgzu/iHQ6F7tEclZ3QhT68ftpOGYpnOwvaMpL5HOCwQ5K/i0jrhoQTGD1ggVhXNdc65v0Sa1EjB5488287HIVkFVBW9EmGrIpJW8vvmwSxnSey5zqhDETHTsa4HL02Jtjb/dsgCOA8jHvym98zwjoqNs1HJai1Km8rPehYfY0DmGIwWuKl8kYZAFb3xnmQJeeQ42PTHrM4ULYHIyE6MZIKouKLyi3RbskZa4Hmj3qXzkMBKejUPW2/VkHYmVZEss9EdbaDwVx5K8y3gygGsjRpxxZ4gOlWl3BYF1mYEBPWqCr5MPx9MYmJ7ZeiMDaKt9NI4ViXvB8f7cLGg6UU7wwOwYJKoZIhvcNAQcBMBQGCCqGSIb3DQMHBAgwGHyFoThHD4AYeyMHHPxsr7FlqHGSBOKfQ0qWq1Cp/TX0" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2015-06-12T23:59:59.0000000+09:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="ABA1941C9A3D0C3BEFE3E5F6AA4338DE509B5719" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>
